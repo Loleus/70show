@@ -1,6 +1,6 @@
 let fetchSVG = async () => {
-  const resp1 = await fetch('../assets/svg/finger.svg');
-  const resp2 = await fetch('../assets/svg/title.svg');
+  const resp1 = await fetch('./assets/svg/finger.svg');
+  const resp2 = await fetch('./assets/svg/title.svg');
   const logo = await resp1.text()
   const title = await resp2.text()
   return [logo, title];
