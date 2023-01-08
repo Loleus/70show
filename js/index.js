@@ -69,7 +69,7 @@ const resetButton = () => {
     return elem
 }
 const initSound = () => {
-    let url = '../assets/audio/loop_ziu5he.wav';
+    let url = './assets/audio/loop_ziu5he.wav';
     audio = document.querySelector('audio');
     audio.src = url;
     audio.style.oneLine = "none";
