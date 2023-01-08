@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+    overflow: hidden;
+}
+address {
+    display: block;
+    position: absolute;
+    bottom: 1vh;
+    width: 100%;
+    color: beige;
+    text-align: center;
+}
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: green;
+    animation: shake 6s infinite.6s
+}
+h1 {
+    display: block;
+    color: lime;
+    font-size: 2.5em;
+    text-shadow: 2px 0 0 orange;
+    transition: opacity .3s;
+    opacity:1;
+
+}
+span {
+    transform: perspective(100px) rotateY(0deg);
+    color: gold;
+    display:inline-block;
+    transition: all .3s;
+    opacity: 1;
+    text-shadow: 2px -1px 1px black;
+}
+svg {
+    overflow: visible;
+}
+svg:first-child {
+    margin-top: 10vh;
+}
+svg:last-child {
+    margin-bottom: 10vh;
+	animation:naszaAnimacja 4s linear 4s infinite;
+}
+.hidden {
+    transform: perspective(100px) rotateY(180deg);
+    transition: all .8s;
+    opacity: 0;
+}
+#button {
+    cursor: pointer;
+    display: block;
+    z-index: 48;
+    position: absolute;
+}
+@keyframes naszaAnimacja
+{
+  0% { transform:perspective(300px) rotateY(0); }
+  100% { transform:perspective(300px) rotateY(360deg); }
+}
+@keyframes shake {
+    0%,
+    13.99% {
+        transform: translate(0, 0)
+    }
+    14%,
+    49% {
+        transform: translate(-10px, 0)
+    }
+    50%,
+    79% {
+        transform: translate(5px, 0)
+    }
+    80%,
+    89% {
+        transform: translate(10px, -10px)
+    }
+    90%,
+    100% {
+        transform: translate(0, -10px)
+    }
+}
+p {
+    color:white;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+body {
+    margin-top: -2vh;
+}
+
+}
