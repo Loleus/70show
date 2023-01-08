@@ -69,19 +69,19 @@ const resetButton = () => {
     return elem
 }
 const initSound = () => {
-    let url = './assets/audio/loop_ziu5he.wav';
+    let url = '/assets/audio/loop_ziu5he.wav';
     audio = document.querySelector('audio');
     audio.src = url;
     audio.style.oneLine = "none";
     audio.loop = true;
     audio.controls = false;
-}
-const init = () => {
-    initSound();
     audio.oncanplay = () => {
         k = 0;
         wrapper = document.getElementById('root');
         wrapper.appendChild(resetButton());
     };
+}
+const init = () => {
+    initSound();
 }
 init()
