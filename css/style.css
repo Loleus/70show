@@ -34,14 +34,11 @@ address {
 }
 h1 {
     display: block;
-    color: lime;
-    font-size: 2.5em;
-    text-shadow: 2px 0 0 orange;
     transition: opacity .3s;
     opacity:1;
-
+    color: lime;
 }
-span {
+span.spanshow {
     transform: perspective(100px) rotateY(0deg);
     color: gold;
     display:inline-block;
@@ -66,9 +63,24 @@ svg:last-child {
 }
 #button {
     cursor: pointer;
+    color: lime;
+    font-size: 3em;
+    text-shadow: 3px 2px 0 orange;
     display: block;
     z-index: 48;
     position: absolute;
+}
+h1#sound {
+    color: rgb(35, 237, 35);
+    text-shadow: none;
+    font-size: 2em;
+    cursor: pointer;
+    display: block;
+    z-index: 48;
+    position: absolute;
+    top: 30px;
+    border: 2px solid rgb(9, 188, 27);
+    padding:5px 10px;
 }
 @keyframes naszaAnimacja
 {
