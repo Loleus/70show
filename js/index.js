@@ -14,7 +14,10 @@ const nextSlide = () => {
     setTimeout(nextSlide, 5000);
   } else {
     lastSlide();
-    setTimeout(() => wrapper.appendChild(resetButton()), 13000);
+    setTimeout(() => {
+        wrapper.appendChild(resetButton());
+        wrapper.appendChild(soundButton());
+    }, 13000);
     k = 0;
   }
 };
